@@ -1,20 +1,20 @@
 # Script Name   : show_file_1.py
 # Author        : Wen Junjie
 # Created       : 08 Oct 2016
-# Last Modified :
-# Version       : 1.0
-# Modifications :
+# Last Modified : 08 Oct 2016
+# Version       : 1.1
+# Modifications : change the name of the function
 # Description   : Show all the files (includes files in subfolder) in a path
 
 import os   # import the Module
 
-def showFileProperties(path):
+def show_file_1(path):
     filename = os.listdir(path)
     for s_filename in filename:
         fi = os.path.splitext(s_filename)
         if fi[0][-1] == '\\':   # check if the last character is '\'
             if fi[1] == '':     # check if it is a file or a folder
-                showFileProperties(path+s_filename)
+                show_file_1(path+s_filename)
             else:
                 print(path+s_filename)
         else:
@@ -24,4 +24,4 @@ def showFileProperties(path):
                 print(path+'\\'+s_filename)
 
 if __name__ == "__main__":
-    showFileProperties("M:\Linkin Park")
+    show_file_1("M:\Linkin Park")
