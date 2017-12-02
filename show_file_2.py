@@ -19,3 +19,4 @@ def show_file_2(path):
 
 if __name__ == "__main__":
     show_file_2("M:\Linkin Park")
+    print('This file is modified from tencent-cloud')
