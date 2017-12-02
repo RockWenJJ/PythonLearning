@@ -25,3 +25,4 @@ def show_file_1(path):
 
 if __name__ == "__main__":
     show_file_1("M:\Linkin Park")
+    print('This is for Git Learning!')
